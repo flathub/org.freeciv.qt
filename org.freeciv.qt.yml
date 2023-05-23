@@ -1,6 +1,6 @@
 app-id: org.freeciv.qt
 runtime: org.kde.Platform
-runtime-version: '5.15-22.08'
+runtime-version: '6.4'
 sdk: org.kde.Sdk
 command: freeciv-qt
 rename-icon: freeciv-client
@@ -19,7 +19,11 @@ modules:
       - --enable-client=qt
       - --disable-fcmp
       - --disable-freeciv-manual
+      - --disable-ruledit
+      - --with-qtver=qt6
     sources:
       - type: archive
-        url: "https://sourceforge.net/projects/freeciv/files/Freeciv 3.0/3.0.7/freeciv-3.0.7.tar.xz"
-        sha256: f6e606f17ed03d971272883f1a4879f5c1c2c247f64b8edefa6a25c8a2a8dac4
+        url: "https://sourceforge.net/projects/freeciv/files/Freeciv 3.1/3.1.0-beta2/freeciv-3.1.0-beta2.tar.xz"
+        sha256: 45fd8f8707029c84747a6c8dfa7ca7ac6a660fbe9a4e082f87cafc32e41eb51e
+      - type: patch
+        path: reldate.patch
