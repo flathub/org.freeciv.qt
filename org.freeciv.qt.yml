@@ -17,10 +17,18 @@ modules:
     no-autogen: true
     config-opts:
       - --enable-client=qt
-      - --disable-fcmp
+      - --enable-fcmp=qt
       - --disable-ruledit
       - --disable-freeciv-manual
     sources:
       - type: archive
         url: "https://sourceforge.net/projects/freeciv/files/Freeciv 3.0/3.0.8/freeciv-3.0.8.tar.xz"
         sha256: 3b5aa32f628890be1741c3ac942cee82c79c065f8db6baff18d734a5c0e776d4
+      - type: patch
+        path: version.patch
+      - type: patch
+        path: 0001-Mark-flathub-as-the-distributor.patch
+      - type: patch
+        path: 0002-Rename-qt-mp-desktop-file.patch
+      - type: patch
+        path: 0003-Rename-modpack-installer-icon.patch
