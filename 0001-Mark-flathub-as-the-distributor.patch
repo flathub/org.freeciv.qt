@@ -1,0 +1,26 @@
+From ad9e80f472f7218bd0b259df18aa07e487937217 Mon Sep 17 00:00:00 2001
+From: Marko Lindqvist <cazfi74@gmail.com>
+Date: Mon, 25 Sep 2023 23:28:08 +0300
+Subject: [PATCH 1/3] Mark flathub as the distributor
+
+Signed-off-by: Marko Lindqvist <cazfi74@gmail.com>
+---
+ fc_version | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/fc_version b/fc_version
+index 6371f17ec4..1fbd8475fa 100755
+--- a/fc_version
++++ b/fc_version
+@@ -72,7 +72,7 @@ DEFAULT_FOLLOW_TAG=stable
+ NETWORK_CAPSTRING_MANDATORY="+Freeciv-3.0-network"
+ NETWORK_CAPSTRING_OPTIONAL="year32 plrculture32 pingfix researchclr cityculture32 rsdesc32 obsinv"
+ 
+-FREECIV_DISTRIBUTOR=""
++FREECIV_DISTRIBUTOR="flathub"
+ 
+ if test "x$FREECIV_LABEL_FORCE" != "x" ; then
+   VERSION_LABEL=$(echo $FREECIV_LABEL_FORCE | sed "s/<base>/$VERSION_LABEL/g")
+-- 
+2.40.1
+
