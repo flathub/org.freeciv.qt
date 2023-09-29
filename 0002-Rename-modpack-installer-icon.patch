@@ -1,0 +1,126 @@
+From e8b3497c70ce0a2448c7a1c42f0eff4c88017909 Mon Sep 17 00:00:00 2001
+From: Marko Lindqvist <cazfi74@gmail.com>
+Date: Fri, 29 Sep 2023 16:31:24 +0300
+Subject: [PATCH 2/2] Rename modpack installer icon
+
+Signed-off-by: Marko Lindqvist <cazfi74@gmail.com>
+---
+ bootstrap/org.freeciv.qt.mp.desktop                 |   2 +-
+ data/Makefile.am                                    |   4 ++--
+ .../128x128/org.freeciv.qt.mp.png}                  | Bin
+ .../{freeciv-modpack.png => org.freeciv.qt.mp.png}  | Bin
+ .../{freeciv-modpack.png => org.freeciv.qt.mp.png}  | Bin
+ .../{freeciv-modpack.png => org.freeciv.qt.mp.png}  | Bin
+ .../{freeciv-modpack.png => org.freeciv.qt.mp.png}  | Bin
+ data/icons/Makefile.am                              |  10 +++++-----
+ .../freeciv-modpack.png => org.freeciv.qt.mp.png}   | Bin
+ tools/fcmp/mpgui_qt.cpp                             |   3 ++-
+ 10 files changed, 10 insertions(+), 9 deletions(-)
+ rename data/{freeciv-modpack.png => icons/128x128/org.freeciv.qt.mp.png} (100%)
+ rename data/icons/16x16/{freeciv-modpack.png => org.freeciv.qt.mp.png} (100%)
+ rename data/icons/32x32/{freeciv-modpack.png => org.freeciv.qt.mp.png} (100%)
+ rename data/icons/48x48/{freeciv-modpack.png => org.freeciv.qt.mp.png} (100%)
+ rename data/icons/64x64/{freeciv-modpack.png => org.freeciv.qt.mp.png} (100%)
+ rename data/{icons/128x128/freeciv-modpack.png => org.freeciv.qt.mp.png} (100%)
+
+diff --git a/bootstrap/org.freeciv.qt.mp.desktop b/bootstrap/org.freeciv.qt.mp.desktop
+index c3f5f2338d..c51c5f7e00 100644
+--- a/bootstrap/org.freeciv.qt.mp.desktop
++++ b/bootstrap/org.freeciv.qt.mp.desktop
+@@ -4,7 +4,7 @@ Name[ru]=Установщик модпаков Freeciv (Qt)
+ Comment=Download and install add-ons for Freeciv
+ Comment[ru]=Скачивайте и устанавливайте дополнения для Freeciv
+ Exec=freeciv-mp-qt
+-Icon=freeciv-modpack
++Icon=org.freeciv.qt.mp
+ StartupNotify=true
+ Terminal=false
+ Type=Application
+diff --git a/data/Makefile.am b/data/Makefile.am
+index e8970454ca..4705732311 100644
+--- a/data/Makefile.am
++++ b/data/Makefile.am
+@@ -56,7 +56,7 @@ DATAPATH_ICONS =
+ RULEDITDIRS =
+ endif
+ if MODINST
+-DATAPATH_ICONS += freeciv-modpack.png
++DATAPATH_ICONS += org.freeciv.qt.mp.png
+ endif
+ 
+ pkgdata_DATA = $(SERVER_FILES) $(CLIENT_FILES) $(DATAPATH_ICONS)
+@@ -64,7 +64,7 @@ pkgdata_DATA = $(SERVER_FILES) $(CLIENT_FILES) $(DATAPATH_ICONS)
+ EXTRA_DIST = \
+ 	freeciv-client.png \
+ 	freeciv-ruledit.png \
+-	freeciv-modpack.png \
++	org.freeciv.qt.mp.png \
+ 	freeciv-client.icns \
+ 	freeciv-server.icns \
+ 	gtk3_menus.xml	\
+diff --git a/data/freeciv-modpack.png b/data/icons/128x128/org.freeciv.qt.mp.png
+similarity index 100%
+rename from data/freeciv-modpack.png
+rename to data/icons/128x128/org.freeciv.qt.mp.png
+diff --git a/data/icons/16x16/freeciv-modpack.png b/data/icons/16x16/org.freeciv.qt.mp.png
+similarity index 100%
+rename from data/icons/16x16/freeciv-modpack.png
+rename to data/icons/16x16/org.freeciv.qt.mp.png
+diff --git a/data/icons/32x32/freeciv-modpack.png b/data/icons/32x32/org.freeciv.qt.mp.png
+similarity index 100%
+rename from data/icons/32x32/freeciv-modpack.png
+rename to data/icons/32x32/org.freeciv.qt.mp.png
+diff --git a/data/icons/48x48/freeciv-modpack.png b/data/icons/48x48/org.freeciv.qt.mp.png
+similarity index 100%
+rename from data/icons/48x48/freeciv-modpack.png
+rename to data/icons/48x48/org.freeciv.qt.mp.png
+diff --git a/data/icons/64x64/freeciv-modpack.png b/data/icons/64x64/org.freeciv.qt.mp.png
+similarity index 100%
+rename from data/icons/64x64/freeciv-modpack.png
+rename to data/icons/64x64/org.freeciv.qt.mp.png
+diff --git a/data/icons/Makefile.am b/data/icons/Makefile.am
+index d13ced3676..693f9e8ee3 100644
+--- a/data/icons/Makefile.am
++++ b/data/icons/Makefile.am
+@@ -40,15 +40,15 @@ endif
+ 
+ if MODINST
+ icons_16_m = \
+-	16x16/freeciv-modpack.png
++	16x16/org.freeciv.qt.mp.png
+ icons_32_m = \
+-	32x32/freeciv-modpack.png
++	32x32/org.freeciv.qt.mp.png
+ icons_48_m = \
+-	48x48/freeciv-modpack.png
++	48x48/org.freeciv.qt.mp.png
+ icons_64_m = \
+-	64x64/freeciv-modpack.png
++	64x64/org.freeciv.qt.mp.png
+ icons_128_m = \
+-	128x128/freeciv-modpack.png
++	128x128/org.freeciv.qt.mp.png
+ else
+ icons_16_m =
+ icons_32_m =
+diff --git a/data/icons/128x128/freeciv-modpack.png b/data/org.freeciv.qt.mp.png
+similarity index 100%
+rename from data/icons/128x128/freeciv-modpack.png
+rename to data/org.freeciv.qt.mp.png
+diff --git a/tools/fcmp/mpgui_qt.cpp b/tools/fcmp/mpgui_qt.cpp
+index 57bb0c6bcb..fafc2e4e8f 100644
+--- a/tools/fcmp/mpgui_qt.cpp
++++ b/tools/fcmp/mpgui_qt.cpp
+@@ -112,7 +112,8 @@ int main(int argc, char **argv)
+     QWidget *central;
+     const char *errmsg;
+     QPixmap *pm;
+-    const char *full_icon_path = fileinfoname(get_data_dirs(), "freeciv-modpack.png");
++    const char *full_icon_path = fileinfoname(get_data_dirs(),
++                                              "org.freeciv.qt.mp.png");
+     const QString fip = QString(full_icon_path);
+ 
+     load_install_info_lists(&fcmp);
+-- 
+2.40.1
+
