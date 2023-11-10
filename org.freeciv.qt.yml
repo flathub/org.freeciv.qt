@@ -1,6 +1,6 @@
 app-id: org.freeciv.qt
 runtime: org.kde.Platform
-runtime-version: '5.15-22.08'
+runtime-version: '5.15-23.08'
 sdk: org.kde.Sdk
 command: freeciv-qt
 rename-icon: freeciv-client
@@ -15,6 +15,7 @@ modules:
   - name: freeciv-qt
     buildsystem: autotools
     no-autogen: true
+    builddir: true
     config-opts:
       - --enable-client=qt
       - --enable-fcmp=qt
@@ -22,10 +23,8 @@ modules:
       - --disable-freeciv-manual
     sources:
       - type: archive
-        url: "https://sourceforge.net/projects/freeciv/files/Freeciv 3.0/3.0.8/freeciv-3.0.8.tar.xz"
-        sha256: 3b5aa32f628890be1741c3ac942cee82c79c065f8db6baff18d734a5c0e776d4
-      - type: patch
-        path: version.patch
+        url: "https://sourceforge.net/projects/freeciv/files/Freeciv 3.0/3.0.9/freeciv-3.0.9.tar.xz"
+        sha256: 16c46a9c378b4a511c1e3d3a7c435a78230a432d8b852202aaf5d5d584962742
       - type: patch
         path: 0001-Mark-flathub-as-the-distributor.patch
       - type: patch
