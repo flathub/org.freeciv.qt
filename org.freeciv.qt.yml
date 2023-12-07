@@ -31,3 +31,7 @@ modules:
         path: 0002-Rename-qt-mp-desktop-file.patch
       - type: patch
         path: 0003-Rename-modpack-installer-icon.patch
+      - type: patch
+        path: version.patch
+      - type: patch
+        path: 0002-Reserve-space-for-terminating-NULL-on-astr_buffer.patch

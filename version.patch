@@ -1,0 +1,27 @@
+diff --git a/fc_version b/fc_version
+index 8496e09ce0..7c2b35316d 100755
+--- a/fc_version
++++ b/fc_version
+@@ -9,17 +9,17 @@ MAJOR_VERSION="3"
+ MINOR_VERSION="0"
+ PATCH_VERSION="9"
+ EMERGENCY_VERSION=""
+-VERSION_LABEL=""
++VERSION_LABEL="-2"
+ 
+ # Type is either "development" or "stable"
+ # Date and NEWS URL are relevant only for "stable" releases
+-if test "$VERSION_LABEL" = "" ; then
++#if test "$VERSION_LABEL" = "" ; then
+   RELEASE_TYPE="stable"
+   RELEASE_DATE="2023-11-10"
+   NEWS_URL="https://www.freeciv.org/wiki/NEWS-${MAJOR_VERSION}.${MINOR_VERSION}.${PATCH_VERSION}"
+-else
+-  RELEASE_TYPE="development"
+-fi
++#else
++#  RELEASE_TYPE="development"
++#fi
+ 
+ # 1) Development until MAJOR and MINOR version numbers are
+ #    set to new release series:
