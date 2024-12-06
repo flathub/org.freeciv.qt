@@ -1,40 +1,26 @@
-From 82b01ed97589d1d5545b0fefc947f7dc1463f52b Mon Sep 17 00:00:00 2001
+From 6a60d5b03d1c4f9595cfd53a12956e295fa737b3 Mon Sep 17 00:00:00 2001
 From: Marko Lindqvist <cazfi74@gmail.com>
-Date: Fri, 29 Sep 2023 14:14:44 +0300
+Date: Fri, 6 Dec 2024 01:23:01 +0200
 Subject: [PATCH 1/2] Mark flathub as the distributor
 
 Signed-off-by: Marko Lindqvist <cazfi74@gmail.com>
 ---
- configure  | 2 +-
  fc_version | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/configure b/configure
-index 2ffb119c56..54ed857e40 100755
---- a/configure
-+++ b/configure
-@@ -5686,7 +5686,7 @@ DEFAULT_FOLLOW_TAG=S3_1
- #     so would break network capability of supposedly "compatible" releases.
- #
- NETWORK_CAPSTRING="+Freeciv-3.1-network city-original rsdesc32 obsinv"
--FREECIV_DISTRIBUTOR=""
-+FREECIV_DISTRIBUTOR="flathub"
- 
- if test "x$FREECIV_LABEL_FORCE" != "x" ; then
-   VERSION_LABEL=$(echo $FREECIV_LABEL_FORCE | sed "s/<base>/$VERSION_LABEL/g")
 diff --git a/fc_version b/fc_version
-index 2691d0fe1d..3ed66f4e3f 100755
+index 46f044d18e..f9d2fb4fc1 100755
 --- a/fc_version
 +++ b/fc_version
-@@ -76,7 +76,7 @@ DEFAULT_FOLLOW_TAG=S3_1
+@@ -76,7 +76,7 @@ DEFAULT_FOLLOW_TAG=S3_2
  #     so would break network capability of supposedly "compatible" releases.
  #
- NETWORK_CAPSTRING="+Freeciv-3.1-network city-original rsdesc32 obsinv"
+ NETWORK_CAPSTRING="+Freeciv-3.2-network"
 -FREECIV_DISTRIBUTOR=""
 +FREECIV_DISTRIBUTOR="flathub"
  
  if test "x$FREECIV_LABEL_FORCE" != "x" ; then
    VERSION_LABEL=$(echo $FREECIV_LABEL_FORCE | sed "s/<base>/$VERSION_LABEL/g")
 -- 
-2.40.1
+2.45.2
 
