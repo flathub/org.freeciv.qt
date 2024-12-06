@@ -1,6 +1,6 @@
 app-id: org.freeciv.qt
 runtime: org.kde.Platform
-runtime-version: '6.6'
+runtime-version: '6.8'
 sdk: org.kde.Sdk
 command: freeciv-qt
 rename-icon: freeciv-client
@@ -13,21 +13,18 @@ finish-args:
   - --filesystem=~/.freeciv:create
 modules:
   - name: freeciv-qt
-    buildsystem: autotools
+    buildsystem: meson
     no-autogen: true
     config-opts:
-      - --enable-client=qt
-      - --enable-fcmp=qt
-      - --disable-freeciv-manual
-      - --disable-ruledit
-      - --with-qtver=qt6
+      - -Dqtver=qt6
+      - -Dclients=qt
+      - -Dfcmp=qt
+      - -Dtools=[]
     sources:
       - type: archive
-        url: "https://sourceforge.net/projects/freeciv/files/Freeciv 3.1/3.1.0-RC1/freeciv-3.1.0-RC1.tar.xz"
-        sha256: 0aed65f4c32d97a7fa8da8efc1402b3c2b6a681fa545f06b83db01a95997d5c8
+        url: "https://sourceforge.net/projects/freeciv/files/Freeciv 3.2/3.2.0-beta1/freeciv-3.2.0-beta1.tar.xz"
+        sha256: 2800c27096e69c3cbcd30ecda5a1c826cfd85db6db759e7f3bf327d2c9812eb8
       - type: patch
         path: 0001-Mark-flathub-as-the-distributor.patch
       - type: patch
         path: 0002-Rename-modpack-installer-icon.patch
-      - type: patch
-        path: 0004-Metadata-Add-developer_name-tags.patch
