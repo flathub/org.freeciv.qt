@@ -1,40 +1,26 @@
-From 1c9c337e3bbff5ea2c91925c547ced9e92afdb21 Mon Sep 17 00:00:00 2001
+From cdd6d6bcf3c5a85bd548b06bf490c222baa9d47e Mon Sep 17 00:00:00 2001
 From: Marko Lindqvist <cazfi74@gmail.com>
-Date: Fri, 26 Apr 2024 07:15:03 +0300
+Date: Thu, 10 Jul 2025 11:09:38 +0300
 Subject: [PATCH] Mark flathub as the distributor
 
 Signed-off-by: Marko Lindqvist <cazfi74@gmail.com>
 ---
- configure  | 2 +-
  fc_version | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/configure b/configure
-index eb6a2b25c5..1a3ad6a8da 100755
---- a/configure
-+++ b/configure
-@@ -5686,7 +5686,7 @@ DEFAULT_FOLLOW_TAG=stable
- #     so would break network capability of supposedly "compatible" releases.
- #
- NETWORK_CAPSTRING="+Freeciv-3.1-network city-original rsdesc32 obsinv ids32"
--FREECIV_DISTRIBUTOR=""
-+FREECIV_DISTRIBUTOR="flathub"
- 
- if test "x$FREECIV_LABEL_FORCE" != "x" ; then
-   VERSION_LABEL=$(echo $FREECIV_LABEL_FORCE | sed "s/<base>/$VERSION_LABEL/g")
 diff --git a/fc_version b/fc_version
-index df857c28f0..8806fe52df 100755
+index f9621c56ae..743956bfcb 100755
 --- a/fc_version
 +++ b/fc_version
-@@ -73,7 +73,7 @@ DEFAULT_FOLLOW_TAG=stable
- #     so would break network capability of supposedly "compatible" releases.
+@@ -81,7 +81,7 @@ NETWORK_CAPSTRING="+Freeciv-3.2-network ownernull16 unignoresync"
+ # patch also this field to contain your identification.
  #
- NETWORK_CAPSTRING="+Freeciv-3.1-network city-original rsdesc32 obsinv ids32"
+ # See doc/README.packaging chapter "Compatibility of modified versions"
 -FREECIV_DISTRIBUTOR=""
 +FREECIV_DISTRIBUTOR="flathub"
  
- if test "x$FREECIV_LABEL_FORCE" != "x" ; then
-   VERSION_LABEL=$(echo $FREECIV_LABEL_FORCE | sed "s/<base>/$VERSION_LABEL/g")
+ if test "${FREECIV_LABEL_FORCE}" != "" ; then
+   VERSION_LABEL="$(echo "${FREECIV_LABEL_FORCE}" | sed "s/<base>/${VERSION_LABEL}/g")"
 -- 
-2.43.0
+2.47.2
 
