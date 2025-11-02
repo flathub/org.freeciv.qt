@@ -28,3 +28,7 @@ modules:
         path: 0001-Mark-flathub-as-the-distributor.patch
       - type: patch
         path: 0002-Rename-modpack-installer-icon.patch
+      - type: patch
+        path: backport/0019-Qt-Work-around-Qt-theming-issue.patch
+      - type: patch
+        path: 0001-Bump-version-number-to-3.2.1b.patch
