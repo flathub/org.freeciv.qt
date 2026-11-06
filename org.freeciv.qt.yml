@@ -22,8 +22,8 @@ modules:
       - -Dtools=[]
     sources:
       - type: archive
-        url: "https://sourceforge.net/projects/freeciv/files/Freeciv 3.2/3.2.6/freeciv-3.2.6.tar.xz"
-        sha256: b3ce15f54083b1fca146f62837a5f7d41d298537fa34940cca70eeb09c7a9c6e
+        url: "https://sourceforge.net/projects/freeciv/files/Freeciv 3.2/3.2.7/freeciv-3.2.7.tar.xz"
+        sha256: 2720076d50f29db42cdc5e510e7c098f7793f7c0ac410fdf390a52bc57507917
       - type: patch
         path: 0001-Mark-flathub-as-the-distributor.patch
       - type: patch
